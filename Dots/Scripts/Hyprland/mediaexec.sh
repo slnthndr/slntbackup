@@ -10,7 +10,7 @@ if [[ "$CURRENT_PLAYER" == "all" ]]; then
 else
   PLAYER_ARG=(--player="$CURRENT_PLAYER")
   ICON="${USER_ICON}"
-  MESSAGE="$CURRENT_PLAYER isn't open"
+  MESSAGE="Nothing is playing"
 fi
 
 truncate() {

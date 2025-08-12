@@ -10,7 +10,8 @@
 
   // Modules Left
   "modules-left": [
-      "group/settings",
+//    "group/settings",
+      "custom/nightlight",
       "group/hardware",
       "wlr/taskbar",
       "hyprland/window"
@@ -103,13 +104,14 @@
     "tooltip-format": "Change wallpaper"
   },
 
-  // Night Light
-  "custom/nightlight": {
-    "format": "☽",
-    "on-click": "pgrep hyprsunset && { pkill hyprsunset; notify-send -i night-light-disabled-symbolic -e 'Night Light Disabled'; } || { hyprsunset -t 4800 & notify-send -i night-light-symbolic -e 'Night Light Enabled'; }",
-    "tooltip-format": "Night Light"
-  },
-  
+"custom/nightlight": {
+  "format": "☽",
+  "on-click": "~/Dots/Scripts/Hyprland/black_filter.sh",
+  "on-scroll-up": "~/Dots/Scripts/Hyprland/black_filter.sh up",
+  "on-scroll-down": "~/Dots/Scripts/Hyprland/black_filter.sh down",
+  "tooltip-format": "Night Light"
+},
+
   // Settings
   "custom/settings": {
     "format": "⛏",
