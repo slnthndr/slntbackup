@@ -3,7 +3,7 @@
 @import "settings/pywal.css";
 
 * {
-    font-family: "Monocraft", "FiraCode Nerd", "JetbrainsMono Nerd", "Hack Nerd", "Fira Mono", "Noto Sans Mono", sans-serif;
+    font-family: "Monocraft", "FiraCode Nerd", "JetbrainsMono Nerd", "Hack Nerd", sans-serif;
     border: none;
 }
 
@@ -185,7 +185,7 @@ tooltip label {
 
 /* HARDWARE GROUP */
 
-#disk,#memory,#cpu,#language,#temperature,#custom-pomodoro {
+#disk,#memory,#cpu,#language,#custom-pomodoro,#temperature {
     margin: 0px;
     padding: 0px;
     font-size: 14px;
@@ -223,9 +223,9 @@ tooltip label {
 /* NETWORK */
 
 #network {
-    background-color: @background;
+    background-color: transparent;
     font-size: 14px;
-    color: #FFF;
+    color: @foreground;
     border-radius: 10px 0px 0px 10px;
     margin: 3px 0px 3px 10px;
     padding: 3px 15px;
@@ -233,13 +233,13 @@ tooltip label {
 }
 
 #network.ethernet {
-    background-color: @background;
-    color: #FFF;
+    background-color: transparent;
+    color: @foreground;
 }
 
 #network.wifi {
     background-color: @background;
-    color: #FFF;
+    color: @foreground;
 }
 
 /* BLUETOOTH */
@@ -297,9 +297,9 @@ tooltip label {
 /* SOUND */
 
 #pulseaudio {
-    background-color: @background;
+    background-color: transparent;
     font-size: 14px;
-    color: #FFF;
+    color: @foreground;
     border-radius: 0px 10px 10px 0px;
     margin: 3px 10px 3px 0px;
     padding: 3px 15px;
@@ -307,12 +307,9 @@ tooltip label {
 }
 
 #pulseaudio.muted {
-    background-color: @background;
+    background-color: transparent;
     color: #ff0000;
 }
-
-
-/* SYS TRAY */
 
 #tray {
     padding: 0px 10px;
@@ -366,4 +363,3 @@ tooltip label {
     opacity: 0.8;
     border: 2px solid @foreground;   
 }
-
